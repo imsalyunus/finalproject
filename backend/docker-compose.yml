@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  #frontend-contoh:
+  #  image: cilist-frontend:latest
+  #  ports:
+  #  - 3000:3000
+  #  environment:
+  #    REACT_APP_BACKEND_URL: "http://backend-contoh:5000"
+    
+
+  backend-contoh:
+    image: imsalyunus/cilist-bee-imsal
+    ports:
+      - 5000:5000
+    environment:
+      DATABASE_USERNAME: "admin"
+      DATABASE_PASSWORD: "cilist123"
+      DATABASE_DATABASE: "cilist" 
+      DATABASE_HOST: "cilist.ceigi6fgqzn9.ap-southeast-2.rds.amazonaws.com"
+      DATABASE_PORT: 3306
+      BASE_URL_PORT: 5000
